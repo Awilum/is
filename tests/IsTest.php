@@ -7,6 +7,7 @@ use function Is\isFalse;
 use function Is\isBoolean;
 use function Is\isIP;
 use function Is\isEmail;
+use function Is\isUrl;
 
 test('test isTrue', function (): void {
     expect(isTrue(true))->toBeTrue();
@@ -53,4 +54,9 @@ test('test isIP', function (): void {
 test('test isEmail', function (): void {
     expect(isEmail('is@msn.com'))->toBeTrue();
     expect(isEmail('is.msn.com'))->toBeFalse();
+});
+
+test('test isUrl', function (): void {
+    expect(isUrl('http://atomastic.com'))->toBeTrue();
+    expect(isUrl('atomastic.com'))->toBeFalse();
 });

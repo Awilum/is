@@ -48,7 +48,7 @@ class Is {
     }
 
     /**
-     * Determine whether the string is IP and it is a valid IP address.
+     * Determine whether the string is IP address.
      *
      * @param mixed $value Value to check.
      * 
@@ -75,5 +75,17 @@ class Is {
     public static function email($value): bool
     {
         return (bool) filter_var($value, FILTER_VALIDATE_EMAIL);
+    }
+
+    /**
+     * Determine whether the value is url.
+     *
+     * @param mixed $value Value to check.
+     * 
+     * @return bool Returns TRUE on success or FALSE otherwise.
+     */
+    public static function url($value): bool
+    {
+        return (bool) filter_var($value, FILTER_VALIDATE_URL);
     }
 }

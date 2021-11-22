@@ -28,3 +28,8 @@ function isEmail($value): bool
 {
    return Is::email($value);
 }
+
+function isUrl($value): bool
+{
+   return Is::url($value);
+}
