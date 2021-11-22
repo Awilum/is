@@ -48,13 +48,17 @@ class Is {
     }
 
     /**
-     * Determine whether the value is IP.
+     * Determine whether the string is IP and it is a valid IP address.
      *
      * @param mixed $value Value to check.
+     * 
+     * @param int   $flags Flags:
+     *                     FILTER_FLAG_IPV4
+     *                     FILTER_FLAG_IPV6
+     *                     FILTER_FLAG_NO_PRIV_RANGE
+     *                     FILTER_FLAG_NO_RES_RANGE
      *
      * @return bool Returns TRUE on success or FALSE otherwise.
-     *
-     * @access public
      */
     public static function ip($value, int $flags = FILTER_FLAG_IPV4 | FILTER_FLAG_IPV6): bool
     {
