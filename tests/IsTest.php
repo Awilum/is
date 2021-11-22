@@ -5,6 +5,7 @@ declare(strict_types=1);
 use function Is\isTrue;
 use function Is\isFalse;
 use function Is\isBoolean;
+use function Is\isIP;
 
 test('test isTrue', function (): void {
     expect(isTrue(true))->toBeTrue();
@@ -41,4 +42,9 @@ test('test isBoolean', function (): void {
     expect(isBoolean('off'))->toBeTrue();
     expect(isBoolean('falSe'))->toBeTrue();
     expect(isBoolean('FALSE'))->toBeTrue();
+});
+
+test('test isIP() method', function (): void {
+    expect(isIP('127.0.0.1'))->toBeTrue();
+    expect(isIP('fòôbàřs'))->toBeFalse();
 });

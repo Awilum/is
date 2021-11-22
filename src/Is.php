@@ -46,4 +46,18 @@ class Is {
     {
         return filter_var($value, FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE) === true;
     }
+
+    /**
+     * Determine whether the value is IP.
+     *
+     * @param mixed $value Value to check.
+     *
+     * @return bool Returns TRUE on success or FALSE otherwise.
+     *
+     * @access public
+     */
+    public static function ip($value, int $flags = FILTER_FLAG_IPV4 | FILTER_FLAG_IPV6): bool
+    {
+        return (bool) filter_var($value, FILTER_VALIDATE_IP, $flags);
+    }
 }

@@ -18,3 +18,8 @@ function isBoolean($value): bool
 {
    return Is::boolean($value);
 }
+
+function isIP($value): bool
+{
+   return Is::ip($value);
+}
