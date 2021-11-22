@@ -13,7 +13,7 @@ Is provides a collection of is* functions for PHP type checking.
 #### With [Composer](https://getcomposer.org)
 
 ```
-composer require atomastic/is
+composer require awilum/is
 ```
 
 ### Documentation
