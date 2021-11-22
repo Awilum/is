@@ -6,6 +6,7 @@ use function Is\isTrue;
 use function Is\isFalse;
 use function Is\isBoolean;
 use function Is\isIP;
+use function Is\isEmail;
 
 test('test isTrue', function (): void {
     expect(isTrue(true))->toBeTrue();
@@ -44,7 +45,12 @@ test('test isBoolean', function (): void {
     expect(isBoolean('FALSE'))->toBeTrue();
 });
 
-test('test isIP() method', function (): void {
+test('test isIP', function (): void {
     expect(isIP('127.0.0.1'))->toBeTrue();
     expect(isIP('fòôbàřs'))->toBeFalse();
+});
+
+test('test isEmail', function (): void {
+    expect(isEmail('is@msn.com'))->toBeTrue();
+    expect(isEmail('is.msn.com'))->toBeFalse();
 });

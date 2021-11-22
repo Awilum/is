@@ -23,3 +23,8 @@ function isIP($value): bool
 {
    return Is::ip($value);
 }
+
+function isEmail($value): bool
+{
+   return Is::email($value);
+}

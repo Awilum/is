@@ -64,4 +64,16 @@ class Is {
     {
         return (bool) filter_var($value, FILTER_VALIDATE_IP, $flags);
     }
+
+    /**
+     * Determine whether the value is true.
+     *
+     * @param mixed $value Value to check.
+     * 
+     * @return bool Returns TRUE on success or FALSE otherwise.
+     */
+    public static function email($value): bool
+    {
+        return (bool) filter_var($value, FILTER_VALIDATE_EMAIL);
+    }
 }
