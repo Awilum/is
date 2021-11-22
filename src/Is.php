@@ -66,7 +66,7 @@ class Is {
     }
 
     /**
-     * Determine whether the value is true.
+     * Determine whether the value is email.
      *
      * @param mixed $value Value to check.
      * 
