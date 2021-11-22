@@ -1,0 +1,36 @@
+{
+    "name": "awilum/is",
+    "description": "The definitive collection of is* functions for PHP type checking.",
+    "license": "MIT",
+    "keywords": [
+        "is"
+    ],
+    "support": {
+      "source": "https://github.com/Awilum/is",
+      "issues": "https://github.com/Awilum/is/issues"
+    },
+    "authors": [
+        {
+            "name": "Sergey Romanenko",
+            "email": "sergey.romanenko@flextype.org",
+            "homepage": "https://awilum.github.io"
+        }
+    ],
+    "require": {
+        "php": "^7.4 || ^8.0"
+    },
+    "autoload":{
+        "psr-4": {
+            "Is\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "require-dev": {
+        "doctrine/coding-standard": "9.0.0",
+        "pestphp/pest": "^1.19.0",
+        "phpstan/phpstan": "^0.12.99",
+        "symfony/var-dumper": "^5.3.7"
+    }
+}
