@@ -16,8 +16,8 @@ Is provides a collection of is* functions for PHP type checking.
 composer require atomastic/is
 ```
 
-### Resources
-* [Documentation](https://digital.flextype.org/components/is)
+### Documentation
+
 
 ### Tests
 
