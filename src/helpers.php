@@ -13,3 +13,8 @@ function isFalse($value): bool
 {
    return Is::false($value);
 }
+
+function isBoolean($value): bool
+{
+   return Is::boolean($value);
+}

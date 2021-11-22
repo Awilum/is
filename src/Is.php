@@ -16,7 +16,7 @@ class Is {
      */
     public static function boolean($value): bool
     {
-        return in_array(mb_strtolower($value), ['true', 'false', '1', '0', 'yes', 'no', 'on', 'off'], true);
+        return is_bool($value) ?: in_array(mb_strtolower((string) $value), ['true', 'false', '1', '0', 'yes', 'no', 'on', 'off'], true);
     }
 
     /**
